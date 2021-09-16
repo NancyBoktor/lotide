@@ -1,3 +1,5 @@
+// calling equallArray to compair the object's values of arrays.
+
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -10,19 +12,8 @@ const eqArrays = function(array1, array2) {
   return true;
 };
   
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(`✅ ✅ ✅ Assertion Passed: ${array1} === ${array2}`);
-  } else {
-    console.log(`🛑 🛑 🛑 Assertion Failed: ${array1} !== ${array2}`);
-  }
-};
+
   
-
-
-
-
-
 const eqObjects = function(object1, object2) {
   let result = true;
   
