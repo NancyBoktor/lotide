@@ -1,12 +1,9 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// import from assertEqual file.
+const assertEqual = require("./assertEqual");
+
+
 const callBack = (x) => x.stars === 2;
-const findKey = function (obj, callBack) {
+const findKey = function(obj, callBack) {
   for (const key in obj) {
     if (callBack(obj[key])) {
       return key;
@@ -24,3 +21,4 @@ const bestTVShowsByGenre = {
 };
 
 assertEqual(findKey(bestTVShowsByGenre, callBack), "noma");
+
