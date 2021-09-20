@@ -1,3 +1,6 @@
+// import from assertEqual file
+const assertEqual = require("./assertEqual");
+
 // loop over allItems
 const firstNames = [
   "Karl",
@@ -45,9 +48,6 @@ const countOnly = function (allItems, itemsToCount) {
   }
   return finalObj;
 };*/
-
-// import from assertEqual file
-const assertEqual = require("./assertEqual");
 
 const result1 = countOnly(firstNames, {
   Jason: true,
