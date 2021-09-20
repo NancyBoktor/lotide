@@ -1,10 +1,26 @@
-// import assertEqual function.
-const assertEqual = require("../assertEqual");
+// import chai & mocha
+const assert = require("chai").assert;
 // import tail function.
 const tail = require("../tail");
 // test
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2);
-assertEqual(result[0], "Lighthouse");
-assertEqual(result[1], "Labs");
-assertEqual(result[0], "Hello");
+
+describe("#tail", () => {
+  it("return ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), [
+      "Lighthouse",
+      "Labs",
+    ]);
+  });
+  it("return 2 for ['Hello', 'Lighthouse', 'Labs'].length", () => {
+    assert.strictEqual(tail(["Hello", "Lighthouse", "Labs"]).length, 2);
+  });
+  it("return 'Lighthouse' for ['Hello', 'Lighthouse', 'Labs'][0]", () => {
+    assert.strictEqual(tail(["Hello", "Lighthouse", "Labs"])[0], "Lighthouse");
+  });
+  it("return 'Labs' for ['Hello', 'Lighthouse', 'Labs'][0]", () => {
+    assert.strictEqual(tail(["Hello", "Lighthouse", "Labs"])[1], "Labs");
+  });
+  it("return false for ['Hello', 'Lighthouse', 'Labs'][0]", () => {
+    assert.notStrictEqual(tail(["Hello", "Lighthouse", "Labs"])[0], "Hello");
+  });
+});
