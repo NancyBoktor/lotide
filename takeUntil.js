@@ -1,5 +1,3 @@
-// import from assertArraysEqual file.
-const assertArraysEqual = require("./assertArraysEqual");
 const callBack = (x) => (x === "," ? true : false);
 
 const takeUntil = (data, callBack) => {
@@ -13,11 +11,4 @@ const takeUntil = (data, callBack) => {
   }
   return answer;
 };
-
-assertArraysEqual(
-  takeUntil(
-    ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"],
-    callBack
-  ),
-  ["I've", "been", "to", "Hollywood"]
-);
+module.exports = takeUntil;

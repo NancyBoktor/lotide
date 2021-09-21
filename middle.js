@@ -1,9 +1,3 @@
-// Implement assertArraysEqual which will take in
-// two arrays and console.log an appropriate message to the console.
-
-// import from assertArraysEqual file.
-const assertArraysEqual = require("./assertArraysEqual");
-
 const middle = function (array) {
   let middleArray = [];
   const length = array.length;
@@ -16,7 +10,4 @@ const middle = function (array) {
   return middleArray;
 };
 
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+module.exports = middle;

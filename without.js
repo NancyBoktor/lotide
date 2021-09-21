@@ -1,6 +1,3 @@
-// import from assertArraysEqual file.
-const assertArraysEqual = require("./assertArraysEqual");
-
 const without = function (array1, array2) {
   const result = array1.filter(function (el) {
     let isExist = true;
@@ -16,5 +13,4 @@ const without = function (array1, array2) {
   return result;
 };
 
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
+module.exports = without;
